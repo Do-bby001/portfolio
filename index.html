@@ -1369,12 +1369,12 @@
     <div class="project-card">
       <div class="project-type">Personal Project · Systems Engineering</div>
       <div class="project-title">RATs — Real-Time Automated Attendance Tracking</div>
-      <div class="project-subtitle">// Wi-Fi Auth Log 기반 실시간 출퇴근 자동화 시스템 · 창원대학교 졸업논문</div>
+      <div class="project-subtitle">Wi-Fi Auth Log 기반 실시간 출퇴근 자동화 시스템</div>
       <p class="project-desc" style="max-width:100%;">
-        기존 출퇴근 시스템의 수동 인증 불편함을 해소하기 위해 설계한 <strong>Wi-Fi 연결 기반 자동 근태 추적 시스템</strong>.
-        사용자는 별도 앱 설치나 버튼 클릭 없이 AP에 연결·해제되는 것만으로 출퇴근이 자동 처리되며,
-        Apache Kafka 실시간 스트리밍과 Node.js + Express 기반 Web UI로
-        관리자가 <strong>연결 해제 감지 0.7~0.8초</strong> 이내에 직원 근태를 실시간 모니터링할 수 있습니다.
+        기존 출퇴근 시스템의 수동 인증 불편함을 해소하기 위해 설계한 <strong>Wi-Fi 연결 기반 자동 근태 추적 시스템</strong>입니다.
+        사용자는 별도 앱 설치나 버튼 클릭 없이 AP(Access Point)에 연결·해제되는 것만으로 출퇴근이 자동 처리되며,
+        관리자에게 Apache Kafka 실시간 스트리밍과 Node.js + Express 기반 Web UI를 지원합니다.
+        이 UI를 활용하여 관리자는 <strong>0.7~0.8초</strong>이내로 디바이스의 연결 해제를 감지하고 직원 근태를 실시간 모니터링할 수 있습니다.
       </p>
 
       <div class="highlight-box purple structured" style="padding:20px 24px;">
@@ -1394,7 +1394,7 @@
             </div>
             <div class="hl-row">
               <span class="hl-step">Storage</span>
-              <span class="hl-content">MySQL DB 타임스탬핑 저장 · 연결 해제 감지 지연 <mark class="hl-mark">≤ 0.8s</mark> 이내 처리</span>
+              <span class="hl-content">Timestamp → MySQL DB 저장, 연결 해제 감지 지연 <mark class="hl-mark">≤ 0.8s</mark> 이내 처리</span>
             </div>
           </div>
         </div>
@@ -1406,15 +1406,15 @@
           <div class="dot dot-red"></div>
           <div class="dot dot-yellow"></div>
           <div class="dot dot-green"></div>
-          <span class="screenshot-label">RATs Admin UI — localhost:3000</span>
+          <span class="screenshot-label">RATs Admin UI</span>
         </div>
         <div class="screenshot-content">
           <span style="color:var(--accent)">Auto Absenteeism Management</span>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--accent);font-weight:700">RATs</span><br><br>
-          <span style="color:var(--text-dimmer)">[ Employee List ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--text-dimmer)">[ Time Packet ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--text-dimmer)">[ Month Packet Graph ]</span><br>
-          <span style="color:var(--text-dim)">강세훈 04:68:65:52:67:a8</span>&nbsp;&nbsp;&nbsp;DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUS<br>
-          <span style="color:var(--accent3)">김민서 09:32:d2:f3:r0:12</span>&nbsp;&nbsp;&nbsp;2023-04-08&nbsp;&nbsp;08:26:43&nbsp;&nbsp;2d:88:c0:82:ac:4d&nbsp;&nbsp;<span style="color:var(--accent)">connected</span><br>
-          <span style="color:var(--text-dim)">한영주 10:6c:66:1d:62:8f</span>&nbsp;&nbsp;&nbsp;2023-04-08&nbsp;&nbsp;09:03:21&nbsp;&nbsp;2d:88:c0:82:ac:4d&nbsp;&nbsp;<span style="color:var(--accent3)">disconnected</span><br>
+          <span style="color:var(--text-dimmer)">[ Employee List ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--text-dimmer)">[ Time Packet ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--text-dimmer)">[ Connecting Info ]</span><br>
+          <span style="color:var(--text-dim)">USER INFO</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUS<br>
+          <span style="color:var(--text-dim)">김민서 09:32:d2:f3:r0:12</span>&nbsp;&nbsp;&nbsp;2023-04-08&nbsp;&nbsp;08:26:43&nbsp;&nbsp;2d:88:c0:82:ac:4d&nbsp;&nbsp;<span style="color:var(--accent)">connected</span><br>
+          <span style="color:var(--accent3)">한영주 10:6c:66:1d:62:8f</span>&nbsp;&nbsp;&nbsp;2023-04-08&nbsp;&nbsp;09:03:21&nbsp;&nbsp;2d:88:c0:82:ac:4d&nbsp;&nbsp;<span style="color:var(--accent3)">disconnected</span><br>
           <span style="color:var(--text-dim)">최성현 17:d4:d0:42:6c:ee</span>&nbsp;&nbsp;&nbsp;2023-04-08&nbsp;&nbsp;09:27:48&nbsp;&nbsp;2d:88:c0:82:ac:4d&nbsp;&nbsp;<span style="color:var(--accent)">connected</span><br>
           <span style="color:var(--accent3)">윤태원 2d:88:c0:82:ac:4d</span>&nbsp;&nbsp;&nbsp;2023-04-08&nbsp;&nbsp;09:53:43&nbsp;&nbsp;2d:88:c0:82:ac:4d&nbsp;&nbsp;<span style="color:var(--accent3)">disconnected</span>
         </div>
@@ -1587,4 +1587,4 @@
     <span class="footer-name">강세훈 · Cloud & Infra Engineer</span>
     <div class="footer-contact">
       <a href="/cdn-cgi/l/email-protection#c8b1a7bdba88ada5a9a1a4e6aba7a5">dev9809k@gmail.com</a>
-    </di
+    </div>
